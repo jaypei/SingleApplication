@@ -395,6 +395,10 @@ SingleApplication::SingleApplication( int &argc, char *argv[], bool allowSeconda
                 }
                 d->memory->unlock();
                 return;
+            } else {
+              qCritical() << "Application"
+                          << this->applicationName()
+                          << "is running.";
             }
 
             d->memory->unlock();
